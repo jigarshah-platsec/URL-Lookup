@@ -14,7 +14,7 @@ from mysql.connector import errorcode
 from mysql.connector import (connection)
 
 
-class URL_Lookup:
+class URL_Lookup_Service:
 
     def __init__(self, URL):
         self.URL = URL
