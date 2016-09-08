@@ -36,7 +36,11 @@ class URL_Lookup_Service:
         Domain = ""
         MalwareURL = True
         if match:
-            Domain = match.group(2) + "." + match.group(3)
+            if match.group(2) is not None:
+                domain = match.group(2).strip(r'www\d?.')
+            if match.group(3) is not None:
+                com = match.group(3)
+            Domain = "{0}.{1}".format(domain, com)
         else:
             print ("Enter valid URL in format (http://www.google.com)")
             raise

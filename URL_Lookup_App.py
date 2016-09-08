@@ -4,7 +4,7 @@
 # enable debugging
 import cgitb
 import cgi
-from URL_Lookup.URL_Lookup import URL_Lookup
+from URL_Lookup_Service.URL_Lookup_Service import URL_Lookup_Service
 
 """
 CGI flag for debugging purpose
@@ -27,7 +27,7 @@ if CGI:
 else:
     URL = "bolo100.com"
 
-LookupInst = URL_Lookup(URL)
+LookupInst = URL_Lookup_Service(URL)
 
 try:
     MalwareURL = LookupInst.lookup()
