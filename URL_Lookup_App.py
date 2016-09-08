@@ -35,7 +35,11 @@ except:
     print "lookup Error"
     raise
 
+response = {}
 if MalwareURL:
-    print "URL is Malware (Not safe)"
+    response[URL] = "Malware (Not Safe)"
+    print "URL is Malware (Not Safe)"
 else:
+    response[URL] = "Safe"
     print "URL is Safe"
+print response
