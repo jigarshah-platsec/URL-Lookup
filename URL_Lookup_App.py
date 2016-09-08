@@ -5,6 +5,7 @@
 import cgitb
 import cgi
 from URL_Lookup_Service.URL_Lookup_Service import URL_Lookup_Service
+import json
 
 """
 CGI flag for debugging purpose
@@ -37,9 +38,9 @@ except:
 
 response = {}
 if MalwareURL:
-    response[URL] = "Malware (Not Safe)"
-    print "URL is Malware (Not Safe)"
+    response[URL] = "Malware"
+    # print "URL is Malware (Not Safe)"
 else:
     response[URL] = "Safe"
-    print "URL is Safe"
-print response
+    # print "URL is Safe"
+print json.dumps(response)

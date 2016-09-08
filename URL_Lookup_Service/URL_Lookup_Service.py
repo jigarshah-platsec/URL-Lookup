@@ -59,10 +59,10 @@ class URL_Lookup_Service:
                 print(err)
                 exit(1)
 
-        print("Successful connection")
-        print Domain
+        # print("Successful connection")
+        # print Domain
         query = "SELECT COUNT(*) FROM malwares where malware = '{0}'".format(Domain)
-        print query
+        # print query
         cursor.execute(query)
         MalwareURL, = cursor.fetchone()
 
